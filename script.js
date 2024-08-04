@@ -1,12 +1,15 @@
+//Array of answers
 let answers = [
     'Paper',
     'Scissors',
     'Rock'
 ]
 
-function gameAnswers(){
-  let userAnswer = prompt ('Paper, scissors, rock! Choose wisely...')
+//Ask user what answer they want to choose
+function userAttempt() {
+let userAnswer = prompt ('Paper, scissors, rock! Choose your answer wisely')
 }
+
 
 function computerAnswer(){
 
@@ -14,3 +17,5 @@ function computerAnswer(){
 
     alert(answers[index])
 }
+
+
