@@ -12,6 +12,10 @@ let userAnswer = prompt ('paper, scissors, rock! Choose your answer wisely')
 let index = Math.floor (Math.random()*3)
 
     alert('My answer is ' + answers[index])
+
+    while(userAnswer == 'scissors' && index == 'rock'){
+        alert ('I win! You lose...')
+    }
 }
 
 
