@@ -1,4 +1,4 @@
-//Array of answers
+//Array of valid answers
 let answers = [
     'paper',
     'scissors',
@@ -9,16 +9,18 @@ let answers = [
 function gameTime() {
 alert ("Let's play paper, scissors, rock! Best out of three?")
 
-
+// create variables and initial values before being changed further in the code
 let roundNumber = 1
 let userAnswer = ''
 let computerAnswer = ''
 let computerWin = 0
 let userWin = 0
+// counting round numbers. Game ends after 3 rounds
 while (roundNumber <= 3){
     let userAnswer = prompt ('paper, scissors, rock! Choose your answer wisely')
     // convert any answers with capital letters to lowercase letters
     userAnswer = userAnswer.toLowerCase()
+    //taking any spaces on the start or end of answers
     userAnswer = userAnswer.trim()
 
   
@@ -29,6 +31,7 @@ if (answers.includes(userAnswer)){
     alert('My answer is ' + computerAnswer)
    } else {
     alert ('That is and invalaid answer. Try again with paper, scissors, or rock')
+    roundNumber = roundNumber - 1
    }
     
 // compares the answers of each round and outputs who the winner of the round is
