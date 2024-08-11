@@ -17,10 +17,12 @@ let computerWin = 0
 let userWin = 0
 while (roundNumber <= 3){
     let userAnswer = prompt ('paper, scissors, rock! Choose your answer wisely')
+    // convert any answers with capital letters to lowercase letters
     userAnswer = userAnswer.toLowerCase()
+    userAnswer = userAnswer.trim()
 
   
-
+// checks if users answer is valid and in the array. Outputs message based on whether the answer is valid or invalid
 let index = Math.floor (Math.random()*3)
 let computerAnswer = answers[index]
 if (answers.includes(userAnswer)){
@@ -29,7 +31,7 @@ if (answers.includes(userAnswer)){
     alert ('That is and invalaid answer. Try again with paper, scissors, or rock')
    }
     
-
+// compares the answers of each round and outputs who the winner of the round is
     if(userAnswer == computerAnswer){
         alert('Its a tie!')
     } else if (userAnswer == 'scissors' && computerAnswer == 'paper'||
@@ -46,6 +48,7 @@ if (answers.includes(userAnswer)){
     roundNumber = roundNumber + 1
 }
 
+// compares points and outputs message and score based on who won
 if (userWin > computerWin){
     alert('Congratulations! You won. ' + userWin + ':' + computerWin)
 } else if (userWin < computerWin){
