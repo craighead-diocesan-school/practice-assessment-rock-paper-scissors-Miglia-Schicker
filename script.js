@@ -5,9 +5,14 @@ let answers = [
     'rock'
 ]
 
+
 //Ask user what answer they want to choose
 function gameTime() {
 alert ("Let's play paper, scissors, rock! Best out of three?")
+let userName = prompt ('What is your name?')
+
+
+
 
 // create variables and initial values before being changed further in the code
 let roundNumber = 1
@@ -52,13 +57,32 @@ if (answers.includes(userAnswer)){
 }
 
 // compares points and outputs message and score based on who won
+let winner = ''
 if (userWin > computerWin){
     alert('Congratulations! You won. ' + userWin + ':' + computerWin)
+    winner = 'winner:' + userName
+    
 } else if (userWin < computerWin){
     alert ('Haha. You lose. ' + userWin + ':' + computerWin)
+    winner = 'winner:computer' 
 } else {
     alert('Its a tie. Try again? ' + userWin + ':' + computerWin)
+    winner = 'draw' 
 }
+
+
+
+ let results = [
+    'draw',
+    'draw',
+    'draw',
+    'winner: Miglia',
+    'winner: Miglia'
+]
+results.push (winner)
+ function Leaderboard() {
+  
+    alert (results)
  }
 
 
