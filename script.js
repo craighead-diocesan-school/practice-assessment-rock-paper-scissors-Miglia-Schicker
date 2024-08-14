@@ -55,6 +55,7 @@ if (answers.includes(userAnswer)){
               userAnswer == 'rock' && computerAnswer == 'paper'||
               userAnswer == 'paper' && computerAnswer == 'scissors'){
      alert('You lose!')
+     alert('to bad so sad')
      computerWin = computerWin + 1
     } 
     roundNumber = roundNumber + 1
@@ -64,14 +65,14 @@ if (answers.includes(userAnswer)){
 
 if (userWin > computerWin){
     alert('Congratulations! You won. ' + userWin + ':' + computerWin)
-    results.push ('winner:' + userName)
+    results.push (' winner:' + userName)
     
 } else if (userWin < computerWin){
     alert ('Haha. You lose. ' + userWin + ':' + computerWin)
-    results.push ('winner:computer') 
+    results.push (' winner:computer') 
 } else {
     alert('Its a tie. Try again? ' + userWin + ':' + computerWin)
-    results.push ('draw') 
+    results.push (' draw') 
 }
 
 }
